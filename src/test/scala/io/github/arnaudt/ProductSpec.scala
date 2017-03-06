@@ -9,13 +9,13 @@ class ProductSpec extends Specification {
 
   "Apple" should {
     "cost 60 p" in {
-      Apple.priceInCents.value ==== 60
+      new Apple().priceInCents.value ==== 60
     }
   }
 
   "Orange" should {
     "cost 25 p" in {
-      Orange.priceInCents.value ==== 25
+      new Orange().priceInCents.value ==== 25
     }
   }
 }

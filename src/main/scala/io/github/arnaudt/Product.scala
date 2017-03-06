@@ -3,14 +3,14 @@ package io.github.arnaudt
 /**
   * Created by arnaudtanguy on 06/03/2017.
   */
-sealed trait Product {
-  def priceInCents: PriceInCents
+abstract class Product {
+  val priceInCents: PriceInCents
 }
 
-final object Apple extends Product {
-  override def priceInCents: PriceInCents = PriceInCents(60)
+class Apple extends Product {
+  override val priceInCents: PriceInCents = PriceInCents(60)
 }
 
-final object Orange extends Product {
-  override def priceInCents: PriceInCents = PriceInCents(25)
+class Orange extends Product {
+  override val priceInCents: PriceInCents = PriceInCents(25)
 }
