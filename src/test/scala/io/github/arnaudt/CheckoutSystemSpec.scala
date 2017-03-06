@@ -7,13 +7,11 @@ import org.specs2.mutable.Specification
   */
 class CheckoutSystemSpec extends Specification {
 
-  "scan" should {
-    "take some Apple and Oranges at the till" in {
-      true === false
-    }
+  private val checkoutSystem = new CheckoutSystem
 
-    "calculate and output the total cost" in {
-      true === false
+  "scan" should {
+    "calculate and output the total cost of products" in {
+      checkoutSystem.scan(Apple, Apple, Orange, Apple) ==== PriceInCents(205)
     }
   }
 }
